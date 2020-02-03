@@ -1,0 +1,23 @@
+server:
+  port: 8001
+mybatis:
+  type-aliases-package: com.enjie.bean
+  mapper-locations: classpath:mapper/*.xml
+spring:
+  application:
+    name: springcloud-provider-8001
+  datasource:
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+    username: root
+    password: root
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+  instance:
+    instance-id: springcloud-provider-8001
+
+#配置监控信息
+info:
+  app.name: enjieTest

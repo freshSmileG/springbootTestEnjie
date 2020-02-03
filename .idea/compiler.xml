@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springcloud-eureka-server-7001" />
+        <module name="springcloudapi" />
+        <module name="springcloudconsumer" />
+        <module name="springcloudeurekaserver7002" />
+        <module name="springcloudeurekaserver7003" />
+        <module name="springcloudprider8081" />
+        <module name="springcloudprovider8001" />
+        <module name="springcloudprovider8001hsytrix" />
+        <module name="springcloudprovider8002" />
+        <module name="springcloudzuul8004" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springcloudeurekaserver" target="1.8" />
+      <module name="springcloudprider8001" target="1.8" />
+      <module name="springcloudproviderhystrim" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
