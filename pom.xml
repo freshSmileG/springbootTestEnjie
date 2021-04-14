@@ -9,16 +9,14 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springcloud-api</module>
-        <module>springcloud-prider-8081</module>
         <module>springcloud-consumer</module>
         <module>springcloud-eureka-server-7001</module>
         <module>springcloud-eureka-server-7002</module>
         <module>springcloud-eureka-server-7003</module>
-        <module>springcloud-prider-8081</module>
         <module>springcloud-provider-8002</module>
         <module>springcloud-provider-8001</module>
         <module>springcloud-provider-8001-hsytrix</module>
-        <module>springcloud-zuul-8004</module>
+        <module>springcloud-gateway-8003</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

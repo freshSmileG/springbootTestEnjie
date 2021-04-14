@@ -24,23 +24,4 @@ public class TestController {
         List<Test> list = testServiceImpl.selectAll();
     return list;
     }
-
-    @PostMapping("/getClient")
-    public Object servicetList(){
-        List<String> services = discoveryClient.getServices();
-        System.out.println(services);
-
-        //可以通过服务列表信息得到具体的微服务信息(通过微服务名称得到)
-        List<ServiceInstance> instances =
-                discoveryClient.getInstances("");
-        for (ServiceInstance instance : instances) {
-            System.out.println(
-                    instance.getHost()+""+
-                            instance.getPort()+
-                            instance.getUri()+
-                            instance.getServiceId()
-            );
-        }
-        return this.discoveryClient;
-    }
 }

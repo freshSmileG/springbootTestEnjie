@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.enjie.mapper.StudentMapper">
+    <insert id="add" parameterType="com.enjie.entity.Student">
+        insert into student(
+        s_id,
+        s_name,
+        s_birth,
+        s_sex,
+        s_department
+        )
+         value (
+         #{sId},
+        #{sName},
+        #{sBirth},
+        #{sSex},
+        #{sDepartment}
+        );
+    </insert>
+</mapper>
+
+
+
+
+

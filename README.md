@@ -1,2 +1,8 @@
 # springbootTestEnjie
 TestCreate Branch
+简单的实现了eureka集群
+简单的做了个分库分表
+简单的使用了下路由网关
+简单使用了下熔断限流
+简单的实现了服务之间的互相调用
+简单的使用redis实现了可能会出问题的分布式锁

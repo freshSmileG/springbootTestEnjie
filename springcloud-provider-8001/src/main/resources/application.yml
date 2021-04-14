@@ -4,13 +4,8 @@ mybatis:
   type-aliases-package: com.enjie.bean
   mapper-locations: classpath:mapper/*.xml
 spring:
-  application:
-    name: springcloud-provider-8001
-  datasource:
-    driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
-    username: root
-    password: root
+  profiles:
+    active: dev
 eureka:
   client:
     service-url:
@@ -21,3 +16,6 @@ eureka:
 #配置监控信息
 info:
   app.name: enjieTest
+logging:
+  level:
+    com.enjie.mapper : debug

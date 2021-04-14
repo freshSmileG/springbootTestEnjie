@@ -15,10 +15,6 @@ import java.util.List;
 
 @RestController
 public class TestController {
-
-    @Autowired
-    private DiscoveryClient discoveryClient;
-
     @Autowired
     TestServiceImpl testServiceImpl;
     @GetMapping("getAll")
@@ -30,10 +26,6 @@ public class TestController {
         }
         return list;
     }
-
-
-
-
     //selectAll方法不可用时候的备选方案
     public List<Test> hystrixSelectAll() {
         List<Test> list = new ArrayList<>();
@@ -41,24 +33,5 @@ public class TestController {
         test.setId("备选方案执行");
         list.add(test);
         return list;
-    }
-
-    @PostMapping("/getClient")
-    public Object servicetList(){
-        List<String> services = discoveryClient.getServices();
-        System.out.println(services);
-
-        //可以通过服务列表信息得到具体的微服务信息(通过微服务名称得到)
-        List<ServiceInstance> instances =
-                discoveryClient.getInstances("");
-        for (ServiceInstance instance : instances) {
-            System.out.println(
-                    instance.getHost()+""+
-                            instance.getPort()+
-                            instance.getUri()+
-                            instance.getServiceId()
-            );
-        }
-        return this.discoveryClient;
     }
 }

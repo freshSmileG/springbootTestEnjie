@@ -1,7 +1,7 @@
-package com.enjie.service.impl;
+package enjie.service.impl;
 import com.enjie.bean.Test;
-import com.enjie.mapper.TestMapper;
-import com.enjie.service.TestService;
+import enjie.mapper.TestMapper;
+import enjie.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

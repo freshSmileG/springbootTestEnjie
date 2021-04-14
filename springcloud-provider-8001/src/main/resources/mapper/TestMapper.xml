@@ -9,4 +9,16 @@
     <select id="selectById" resultType="com.enjie.bean.Test" parameterType="com.enjie.bean.Test">
         select * from test where id = #{id} ;
     </select>
+
+    <insert id="insert" parameterType="com.enjie.bean.Test">
+        insert into test (id)
+         values (#{id});
+    </insert>
+
+
 </mapper>
+
+
+
+
+

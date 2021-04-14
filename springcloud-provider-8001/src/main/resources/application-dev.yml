@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: springcloud-provider-8001
+#  datasource:
+#    driver-class-name: org.gjt.mm.mysql.Driver
+#    url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+#    username: root
+#    password: root
+
+  shardingsphere:
+    datasource:
+      names: ds1
+      ds1:
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: root
+    sharding:
+      tables:
+        student:
+          actual-data-nodes: ds1.student$->{1..2}
+          key-generator:
+            column: s_id
+            type: SNOWFLAKE
+            props:
+              worker:
+                id: 1
+                    databaseStrategy: #分库
+                      inline:
+                        shardingColumn: cid
+                        algorithmExpression: m$->{cid % 2 +1}
+          #分表
+          table-strategy:
+            inline:
+              sharding-column: s_id
+              algorithm-expression: student$->{s_id%2+1}
+      #打印sql
+      props:
+        sql:
+          show: true
+
+job:
+  schdule: "0/5 * * * * ?"

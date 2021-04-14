@@ -1,4 +1,4 @@
-package com.enjie.service;
+package enjie.service;
 
 
 import com.enjie.bean.Test;

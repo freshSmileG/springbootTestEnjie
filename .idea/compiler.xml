@@ -6,7 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springcloud-api" />
+        <module name="springcloud-consumer" />
         <module name="springcloud-eureka-server-7001" />
+        <module name="springcloud-eureka-server-7002" />
+        <module name="springcloud-eureka-server-7003" />
+        <module name="springcloud-gateway-8003" />
+        <module name="springcloud-provider-8001" />
+        <module name="springcloud-provider-8001-hsytrix" />
+        <module name="springcloud-provider-8002" />
         <module name="springcloudapi" />
         <module name="springcloudconsumer" />
         <module name="springcloudeurekaserver7002" />
